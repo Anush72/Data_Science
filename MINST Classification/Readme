@@ -1,0 +1,13 @@
+As I used dataset from Scikit Learn Library for Classification of Handwritten digit MNIST. I tried different model like Random forest, Decision Tree and K nearest neighbours. I got high accuracy at KNN. 
+Steps 
+•	Importing Libraries
+•	Loading dataset from sklearn 
+•	Splitting dataset into training and testing set
+•	The dataset is cleaned in library
+•	Training dataset on KNN using training set
+•	Predicting testing set
+•	Evaluating the model using accuracy and confusion matrix
+•	Tunning hyperparameter
+•	Training the dataset on
+
+  As we find the best model for classification, we tuned the hyperparameter and again train the data on tuned hyperparameter and our accuracy increase by 0.002.
