@@ -1,0 +1,16 @@
+Predicting survived people in titanic dataset. 
+Loading Libraries
+Reading csv files, we have two csv files training and testing files
+Checking the info of dataset, we have 12 columns in dataset
+Dropping the columns we didnot need or doesnot give importance to target
+Checking the null values in both training and testing set
+Filling the null values with mean in integer and mode in categorical value
+One Hot encoding to encode categorical value into numerical value, as there is no hiearchy between category
+Separating the target and variables in training set
+Joining the variables with encoded variables
+Featuring scaling the values with standarization method
+Training the dataset with random forest model 
+As, we see the accuracy score using cross validation with fold 10 is 0.80
+Again, Training the dataset with Support vector machine using kernel function 'rbf' with random state = 42
+The accuracy score is 0.82 which is greater than random forest
+At last, we predict the test. we can say that we are 82.38 percent sure abou the survival.
