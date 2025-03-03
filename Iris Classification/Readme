@@ -1,0 +1,18 @@
+In this classification, I used simple dataset of iris flower to classify the different classes
+Iris Setosa, Iris Versicolor and Iris Virginica (Three classes)
+I get this dataset from sklearn.datasets.load_iris
+Steps and what I learn from this dataset
+1. Importing Libraries (numpy and pandas)
+2. lodaing dataset and getting features and target
+3. looking shape of both target and features
+4. splitting dataset in both training and testing set
+5. Feature scaling using standarization
+6. Importing the model KNeighborsClassifier and Gaussian Naive Bayes.
+7. Importing the metrics to evaulate the dataset
+8. Training on Kneighbors classifier
+9. We can see evaluation as in classification report we get 100 percent accuracy,
+recision and precision is also 100 percent. Looking at confusion matrix we got correct prediction
+10. So,  I used cross validation score to test , is model overfitting. I got nice accuracy score in cross fold 5
+11. Training the model on Naive bayes and got same as KNN.
+12. I used cross_val_score to determine is model is overfitting, but I got nice score in cross val score.
+13. Naive bayes is better than KNN in cross validation.
