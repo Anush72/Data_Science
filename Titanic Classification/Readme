@@ -13,4 +13,4 @@
 13. As, we see the accuracy score using cross validation with fold 10 is 0.80
 14. Again, Training the dataset with Support vector machine using kernel function 'rbf' with random state = 42
 15. The accuracy score is 0.82 which is greater than random forest
-16. At last, we predict the test. we can say that we are 82.38 percent sure abou the survival rate.
+16. At last, we predict the test. we can say that the survival status is 82.38 percent of passengers in dataset
