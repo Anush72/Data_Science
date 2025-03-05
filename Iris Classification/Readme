@@ -1,18 +1,17 @@
-In this classification, I used simple dataset of iris flower to classify the different classes
-Iris Setosa, Iris Versicolor and Iris Virginica (Three classes)
-I get this dataset from sklearn.datasets.load_iris
-Steps and what I learn from this dataset
-1. Importing Libraries (numpy and pandas)
-2. lodaing dataset and getting features and target
-3. looking shape of both target and features
-4. splitting dataset in both training and testing set
-5. Feature scaling using standarization
-6. Importing the model KNeighborsClassifier and Gaussian Naive Bayes.
-7. Importing the metrics to evaulate the dataset
-8. Training on Kneighbors classifier
-9. We can see evaluation as in classification report we get 100 percent accuracy,
-recision and precision is also 100 percent. Looking at confusion matrix we got correct prediction
-10. So,  I used cross validation score to test , is model overfitting. I got nice accuracy score in cross fold 5
-11. Training the model on Naive bayes and got same as KNN.
-12. I used cross_val_score to determine is model is overfitting, but I got nice score in cross val score.
-13. Naive bayes is better than KNN in cross validation.
+Classification of Iris flower
+In this dataset, we have to classify the three classes of iris flower.
+Setosa:0 , Versicolor:1, and Virginica:2
+# Following steps to do classification
+1. importing libraries
+2. importing iris dataset using Module dataset of sklearn and function load_iris
+3. We have features and target
+4. splitting dataset into train and test set
+5. Using StandardScaler to Feature scaling 
+6. Importing KNeighborsClassifier(KNN), Gaussian NB and metrics like Confusion_Matrix, classification_report and accuracy_score
+7. Training the dataset on KNN 
+8. Importing cross_val_score to check the accuracy among differnt folds and StratifiedKFold to balancing the dataset
+9. Cross validation to see the model performance across different folds of data
+10.As in KNN, we got 0.90 accuracy and 0.03 variation which good 
+11. We did same in naive bayes and get 0.93 with 0.3 variation.
+12. So, I choose naive bayes to test testing set
+13. We got 1 accuracy in test set which is good. we get 100 percent accuracy maybe due to small number of test and the data is well cleaned.
