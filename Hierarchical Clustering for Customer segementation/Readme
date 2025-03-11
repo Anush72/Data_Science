@@ -1,0 +1,16 @@
+In this project, I used unsupervised learning machine learning (clustering Hierachical cluster) to segement the customer spending
+based on annual income and age also. 
+Data used : https://www.kaggle.com/datasets/abdallahwagih/mall-customers-segmentation
+Features : 5
+Steps in project
+1. Importing libraries
+2. Loading dataset
+3. Using dendogram to find the cluster in dataset
+4. import hiearchy from scipy.cluster
+5. for finding the number of cluster in dendogram we have to look for largest distance of vertical line which isnot 
+  cut by horizontal line. As blue line in left and orange line in right is comparatively equal so I used both line to make cluster
+and try differntly.
+6. As we cut blue line we got three cluster
+7. Training dataset on AgglomerativeClustering import from cluster module of sklearn(scikit-learn)
+8. Visualizing the clustering and not seeing good segementation of cluster.
+9. So I used five cluster to segment the dataset and get good visualization and result.
