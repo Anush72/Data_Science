@@ -1,0 +1,14 @@
+In this project I used voting classifier to classify the MINST dataset. In this dataset we
+have to classify the digits from 0 to 9. The dataset taken from sklearn.datasets.
+Steps in this project
+1. Lodaing Libraries
+2. Loading Dataset from sickit learn datasets
+3. Looking at the dataset
+4. splitting dataset into training,validation and test set
+5. Importing Models like Random Forest Classifier, Extra Tree Classifier, Linear Support Vector, K Neighbors Classifier
+6. Training all models
+7.Looking at the accuracy Score at validation set
+8. AMking list of model and Importing the voting classifier
+9. training the voting classifier
+10. We got 0.9731 accuracy score in valid set and removing svc increase the accuracy by 0.002
+11. Testing the accuracy in test set and got 0.972 accuracy
