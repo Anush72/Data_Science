@@ -1,0 +1,17 @@
+In this project, I learn about the Dimensionality Reduction and Its type. I used MNIST dataset to use the different algorithm for dimension Reduction
+Steps in this projects
+1. Importing the Libraries (numpy, pandas and matplotlib)
+2. Loading the datset from scikit learn(sklearn.datasets)
+3. Splitting dataset into training and testing set
+4. Importing PCA and trained on Training set 
+5. As we can see the variance in each principal component
+6.To create first component to have 0.95 Varaince of Dataset
+7. Using numpy argmax to get the number of features reduce to get 0.95
+8. 154 number of features we got 0.95 in first principal component
+9. We can use randomized or incremental PCA to reduced the dimesnion of features
+10. Random projection to project the high dimesnion into lower dimension (importing johnson_lindenstrauss_min_dm)
+11. we can also set hyperparameter in PCA to get 0.95 variance in first component analysis.
+12. Training the dataset on both reduced and non-reduced dataset we got less accuracy on reduced dataset when using randomforestclassifier.
+13. Training the dataset on SGDclassifier we got 0.897 accuracy which less than the random forest classifier.
+14. Using TSNE to transform dataset into 2D for nice plots.
+15. But using PCA doesnot give nice plots as TSNE.
