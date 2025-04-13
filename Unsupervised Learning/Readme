@@ -1,0 +1,15 @@
+In this project, I learn small things about unsupervised learning and 
+some great concepts in unsupervised learning(K means, DBSCAN, Gaussian Mixture)
+How to use elbow and silhouette method to find n number of cluster in kmeans
+steps I taken in this project 
+1. Importing the Libraries
+2. Making Blobs
+3. Seeing the shape of X and y
+4. Seeing the scatter plot of graph
+5. Using Elbow method to find number of cluster and from graph the number of cluster is 3.
+6. Seeing the scatter plot and how kmeans split the dataset into three cluster
+7. Using Silhouette Graph we can see the number of cluster to be 5 which is perfect cluster
+8. Using 5 cluster to train model and seeing scatter plot we can see how k means clear distinguish the five cluster
+9. Making moon dataset and using the DBSCAN algorith to find the clusters in dataset. In this algorithm perfectly find the
+clusters and for DBSCAN we have to tune eps and min_smaples.
+10. Looking at Gaussian mixture and we got differnt weights, means and covaraince according to number of clusters.
