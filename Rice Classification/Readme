@@ -1,0 +1,17 @@
+In this project, I used rice dataset to classify the two classes of dataset.
+# Steps to be taken in this project
+1. Importing Libraries and Loading dataset
+2. Exploratory Data Analysis(EDA) to look out the dataset
+3. Dropping the features which have high correlation.
+4. Transforming the class into label using Label Encoder
+5. Feature SCaling using StandardScaler
+6. Training the dataset on Logistic Regression 
+7. Cross Validation on training set and got 0.92 accuracy with 0.016 variation.
+8. Training the dataset on Linear SVC and got same result as logistic Regression.
+9. Training the dataset on Decison Tree and got accuracy 0.88 with 0.019 variation.
+10. Tunning the hyperparameter of logistic regression.
+11. Training the dataset on KNN and got 0.91 accuracy with 0.013 varitaion.
+12. Got the high accuracy with logistic regression
+13. Testing on test set and got 0.914 accuracy.
+14. Confusion Matrix: 290 True Negative, 36 False Positive, 29 False Negative and
+407 True Positive.
