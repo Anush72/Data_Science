@@ -1,0 +1,15 @@
+I used support vector regressor to predict housing value of californication and how well support vector fit the dataset
+Dataset - Module of Sklearn datasets with function fetch_california_housing which is cleaned
+Steps that I take for this projects
+1. importing pandas and numpy
+2. Loading dataset and getting features and target
+3. We have 8 features( dimension) that is median income, House Agem, Average rooms, Average Bedrooms, population, Average Occupation, Latitude and longitude and target Median house value.
+4. Seeing the varaiance and description of features. No huge difference in varaiance
+5. Converting dataframe in array 
+6. Splitting the training and testing set using train_test_split function of model_selection of sklearn
+7. Feature scaling standarization ( value range from - 3 to + 3) using StandardScaler
+8. Training the data on SVR with kernel 'rbf'
+9. cross_val_score to predict the model evaluation in 5 folds of data.
+10. We got 0.71 r2 score which is good and -0.61 means model prediction are off by 61,000 from actual values
+11. Searching for best parameters and model using GridSearchCV
+12. Overall, We get 0.61 in rmse which isnot great model and r2 0.71 means model is average overall.

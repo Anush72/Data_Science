@@ -1,0 +1,10 @@
+In this project I used moon dataset in decision tree classification.
+Steps 
+1. Importing the libraries
+2. Making moon dataset from scikit learn 
+3. Splitting dataset into training and testing set
+4. Training the dataset on Decision Tree classifier imported from scikit learn
+5. Cross validation and got 0.778 accuracy
+6. Grid Search to search best hyperparameter
+7. Predicting the dataset with best model
+8. Got 0.8445 accuracy

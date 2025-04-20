@@ -1,0 +1,20 @@
+In this project, I used unsupervised learning machine learning (clustering K means) to segement the customer spending
+based on annual income and age also. 
+Data used : https://www.kaggle.com/datasets/abdallahwagih/mall-customers-segmentation
+Features : 5
+Steps in project
+1. Importing necessary libraries
+2. Loading the dataset 
+3. Histogram of all features
+4. Seeing varainace in dataset
+5. I used elbow method to find the cluster in data
+6. Selecting the relevant features
+7. Importing Kmeans from cluster module of sklearn.
+8. Making varaibale wccs with empty list
+9. range from(1,11) to find optimal cluster from 1 to 10.
+10. In elbow method, we look for the point where the line goes smootly to down.
+11. we find the point 5 where line goes smoothly and choose 5 as cluster
+12. Training the data using K means cluster
+13. As in figure we can see that we got five different cluster with different colors.
+14. We can easily disntinguish the customer spending habit with their annual income.
+15. Same step for Age also but we cannot clearly see proper cluster as spending score doesnot depend on age.

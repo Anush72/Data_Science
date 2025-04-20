@@ -1,0 +1,14 @@
+In this project, I make model to detech whether the given email is spam or ham. The dataset I used in this project available at https://spamassassin.apache.org/old/publiccorpus/.
+The dataset Iused in this project are a) 20021010_easy_ham.tar.bz2, b) 20021010_hard_ham.tar.bar.bz2 and c)20021010_spam.tar.bz2
+Steps in this project 
+1. Importing the Libraries
+2. Making the Function to take the files from directory
+3. loading the ham emails and spam emails and join both emails in same list
+4. Converting emails list to Dataframe(pandas)
+5. Shuffling the dataset
+6. Using nltk and re module to clean the data. re module to remove other character in text (only alphabet),Porter Stemmer to make the word to root word(Cleaning-clean) and stopword to remove the words which didnot give value(a,a,the)
+7. Converting the clean text to vectorizer and get array.
+8. Getting Traget from Dataframe
+9. Splitting dataset into training and testing set.
+10. Using naive bayes to make model and got 0.976 accuracy with 0.0094 variance which shows that Model Generalize well on dataset.
+11. Testing on test set and got 98 percent accuracy.
