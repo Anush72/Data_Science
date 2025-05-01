@@ -1,0 +1,19 @@
+In this project, I used Car Evaluation Dataset get from UCI Repository and did classification using Random Forest Classifier.
+Steps I take to complete this projects
+1. Importing the Libraries
+2. Importing the Dataset from UCI
+3. Looking at the dataset ( no null values)
+4. Looking at the variation of dataset (contain the same number of different values of differnt columns) and dataset is Balanced
+5. All columns are categorical and have the order on it so I used Label Encoder to transform data into features
+6. Looking at the target and the target is imbalanced.
+7. Using stratify to equally balance the dataset on training and testing set.
+8. Transforming the target into label using LabelEncoder(0 - acc ,1 - good,2-unacc,3-vgood)
+9. Training the dataset in RandomForestClassifier
+10. Looking at the Generalization of model using cross val and got 0.944 accuracy with 0.031 variation
+11. Looking for best model and parameter using GridSearchCV
+12. Testing on test set and got 0.97 accuracy.
+13. acc = 0 , good = 1, 2 = unacc and 3 = vgood
+13. Confusion Matrix 72 - Truly label as 0 , 4 instances predicted as 0  but 1 and 1 as 0 but 2. 
+True label as 1 = 13 but 1 instances was predicted as 0 which is 1. 
+True label as 2 = 240 but 2 predited as 0 but 2. 
+True label as 3 = 12 but 1  predicted as 0 but 3.
