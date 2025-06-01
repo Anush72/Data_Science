@@ -1,0 +1,20 @@
+Making the movie recommendation using apriori algorithm
+Dataset from MovieLens URL:https://grouplens.org/datasets/movielens/
+Using Module : pandas and matplotlib, mlxtend,re(regular expression), worcloud and collections
+pandas: Data wrangling, looking at data
+matplotlib: looking at the charts
+mlxtend : applying the aprior algorithm and association rules
+wordcloud : looking at the most watched movies
+collections: Counting the movies from the list
+
+Steps I take in this projects
+1. importing the datasets movies.csv and ratings.csv
+2. Combining the datasets using movieId
+3. Cleaning the title using re movie
+4. Making the basket movie by userID
+5.Making the list from title to look at wordcloud
+6. Looking at the top 20 movies
+7. Converting the title into vector using TransactionalEncoder
+8.Applying the Apriori Rules(with minimum support = 0.1 and Association Rules with confidence = 0.5)
+9. Making the recommendation function
+10.looking at recommendation
