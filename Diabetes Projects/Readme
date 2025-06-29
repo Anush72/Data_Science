@@ -1,0 +1,23 @@
+In this project, I build the model to predict the diabetes. I used Kaggle dataset make model.
+Packages :- numpy, pandas, matplotlib,scikitlearn,pickle and seaborn
+numpy = for passing numpy array in model for training
+pandas - for data wrangling, statistics
+matplotlib, seaborn - visualization
+scikitlearn - training the model 
+pickel - to save model
+Steps in Projects
+a. Loading the Csv files
+b. looking at the data like info, head, summary statistics, null values and data types
+c. Statistics Like Correlation, overall statistics
+d. Looking at histogram of features and see the distribution 
+e. Looking at box plot for outliers and distribution of diabetes in various factor like hypertension and smoking hsitory
+f. Cob=nverting the gender and smoking_history into label using Label Encoder
+g. Splitting the dependent and independent variables
+h. Splitting the dataset into training and testing set
+g. Training on Random forest model and looking at cross validation score which is 0.96 mean value with 0.0019 spreadness
+i. Training on AdaBosster and looking at cross validation score which is 0.971 with variation 0.001 spreadness which is very low
+h. Hyperparamter tunning using random search for f1 score 
+i. Classification report and confusion matrix for checking the metrics
+j. We got 0.69 recall on Neagtive class so I am going to change the threshold to gain the high recall because True Negative is highly sensitive in medical field.
+k. Looking at Precision recall curve for deciding the threshold and I set threshold to 0.43 which gives 0.97 recall which will catch more Negative class but False Positive increase which be tested again
+j. Saving the model with threshold
