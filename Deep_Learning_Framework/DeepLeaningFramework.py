@@ -199,6 +199,13 @@ class Tensor(object):
             new.index_select_indices = indices
             return new
         return Tensor(self.data[indices.data])
+
+    def softmax(self):
+        temp = np.exp(self.data)
+        softmax_output = temp / np.sum(temp,
+                                       axis=len(self.data.shape) - 1,
+                                       keepdims=True)
+        return softmax_output
     def cross_entropy(self,target_indices):
         temp = np.exp(self.data)
         softmax_output = temp/np.sum(temp,axis=len(self.data.shape)-1,keepdims=True)
@@ -241,7 +248,7 @@ class Layer(object):
     def get_parameters(self):
         return self.parameters
 class Linear(Layer):
-    def __init__(self,n_inputs,n_outputs):
+    def __init__(self,n_inputs,n_outputs,bias=True):
         super().__init__()
         W = np.random.randn(n_inputs,n_outputs)*np.sqrt(2.0/(n_inputs))
         self.weight = Tensor(W,autograd=True)
@@ -330,3 +337,46 @@ class RNNCell(Layer):
     def init_hidden(self,batch_size=1):
             return Tensor(np.zeros((batch_size,self.n_hidden)),autograd=True)
 
+class LSTMCell(Layer):
+
+    def __init__(self,n_inputs,n_hidden,n_output):
+        super().__init__()
+        self.n_inputs = n_inputs
+        self.n_hidden = n_hidden
+        self.n_output = n_output
+        self.xf = Linear(n_inputs,n_hidden)
+        self.xi = Linear(n_inputs,n_hidden)
+        self.xo = Linear(n_inputs, n_hidden)
+        self.xc = Linear(n_inputs, n_hidden)
+        self.hf = Linear(n_inputs, n_hidden,bias=False)
+        self.hi = Linear(n_inputs, n_hidden,bias=False)
+        self.ho = Linear(n_inputs, n_hidden,bias=False)
+        self.hc = Linear(n_inputs, n_hidden,bias=False)
+        self.w_ho = Linear(n_inputs, n_hidden,bias=False)
+        self.parameters += self.xf.get_parameters()
+        self.parameters += self.xi.get_parameters()
+        self.parameters += self.xo.get_parameters()
+        self.parameters += self.xc.get_parameters()
+        self.parameters += self.hf.get_parameters()
+        self.parameters += self.hi.get_parameters()
+        self.parameters += self.ho.get_parameters()
+        self.parameters += self.hc.get_parameters()
+        self.parameters += self.w_ho.get_parameters()
+
+    def forward(self,input,hidden):
+        prev_hidden = hidden[0]
+        prev_cell = hidden[1]
+        f = (self.xf.forward(input) + self.hf.forward(prev_hidden)).sigmoid()
+        i = (self.xi.forward(input) + self.hi.forward(prev_hidden)).sigmoid()
+        o = (self.xo.forward(input) + self.ho.forward(prev_hidden)).sigmoid()
+        g = (self.xc.forward(input) + self.hc.forward(prev_hidden)).sigmoid()
+        c = (f*prev_cell)+(i*g)
+        h = o * c.tanh()
+        output = self.w_ho.forward(h)
+        return output, (h,c)
+    def init_hidden(self,batch_size=1):
+        h = Tensor(np.zeros((batch_size,self.n_hidden)),autograd=True)
+        c = Tensor(np.zeros((batch_size,self.n_hidden)),autograd=True)
+        h.data[:,0] +=1
+        c.data[:,0] +=1
+        return (h,c)
